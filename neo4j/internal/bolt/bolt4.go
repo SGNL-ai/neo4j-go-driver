@@ -291,8 +291,8 @@ func (b *bolt4) TxBegin(
 	ctx context.Context,
 	txConfig idb.TxConfig,
 ) (idb.TxHandle, error) {
-	// Ok, to begin transaction while streaming auto-commit, just empty the stream and continue.
-	if b.state == bolt4_streaming {
+	// Ok, to begin transaction while streaming auto-commit or transaction, just empty the stream and continue.
+	if b.state == bolt4_streaming || b.state == bolt4_streamingtx {
 		if b.bufferStream(ctx); b.err != nil {
 			return 0, b.err
 		}
