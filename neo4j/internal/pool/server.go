@@ -22,10 +22,11 @@ package pool
 import (
 	"container/list"
 	"context"
-	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/log"
 	"sync/atomic"
 	"time"
+
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/log"
 )
 
 // Represents a server with a number of connections that either is in use (borrowed) or
@@ -139,6 +140,14 @@ func (s *server) calculatePenalty(now time.Time) uint32 {
 // Returns a busy connection, makes it idle
 func (s *server) returnBusy(c db.Connection) {
 	s.unregisterBusy(c)
+
+	// Don't re-add the connection into idle if it is already idle.
+	for e := s.idle.Front(); e != nil; e = e.Next() {
+		if c == e.Value.(db.Connection) {
+			return
+		}
+	}
+
 	s.idle.PushFront(c)
 }
 
