@@ -295,6 +295,10 @@ func (b *bolt4) TxBegin(
 	// Makes all outstanding streams invalid
 	b.discardAllStreams(ctx)
 
+	if b.state == bolt4_tx {
+		b.state = bolt4_ready
+	}
+
 	if err := b.assertState(bolt4_ready); err != nil {
 		return 0, err
 	}
