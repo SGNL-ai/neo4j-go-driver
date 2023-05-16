@@ -295,10 +295,6 @@ func (b *bolt4) TxBegin(
 	// Makes all outstanding streams invalid
 	b.discardAllStreams(ctx)
 
-	if b.state == bolt4_tx {
-		b.state = bolt4_ready
-	}
-
 	if err := b.assertState(bolt4_ready); err != nil {
 		return 0, err
 	}
@@ -809,6 +805,8 @@ func (b *bolt4) ForceReset(ctx context.Context) {
 	// Reset any pending error, should be matching bolt4_failed, so
 	// it should be recoverable.
 	b.err = nil
+
+	b.discardAllStreams(ctx)
 
 	if err := b.queue.receiveAll(ctx); b.err != nil || err != nil {
 		return

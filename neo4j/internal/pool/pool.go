@@ -462,6 +462,8 @@ func (p *Pool) Return(ctx context.Context, c idb.Connection) error {
 	}
 
 	if isAlive {
+		if c.
+
 		// Just put it back in the list of idle connections for this server
 		if !p.serversMut.TryLock(ctx) {
 			return racing.LockTimeoutError("could not acquire server lock when putting connection back to idle")
