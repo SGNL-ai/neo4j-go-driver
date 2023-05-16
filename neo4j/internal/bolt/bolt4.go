@@ -23,14 +23,15 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"net"
+	"reflect"
+	"time"
+
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/auth"
 	iauth "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/auth"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/collections"
 	idb "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/db"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/errorutil"
-	"net"
-	"reflect"
-	"time"
 
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/db"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/packstream"
@@ -291,14 +292,8 @@ func (b *bolt4) TxBegin(
 	ctx context.Context,
 	txConfig idb.TxConfig,
 ) (idb.TxHandle, error) {
-	// Ok, to begin transaction while streaming auto-commit or transaction, just empty the stream and continue.
-	if b.state == bolt4_streaming || b.state == bolt4_streamingtx {
-		if b.bufferStream(ctx); b.err != nil {
-			return 0, b.err
-		}
-	}
 	// Makes all outstanding streams invalid
-	b.streams.reset()
+	b.discardAllStreams(ctx)
 
 	if err := b.assertState(bolt4_ready); err != nil {
 		return 0, err
