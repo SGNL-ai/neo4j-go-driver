@@ -26,6 +26,11 @@ import (
 	"container/list"
 	"context"
 	"fmt"
+	"math"
+	"sort"
+	"sync"
+	"time"
+
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/config"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/db"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/auth"
@@ -33,10 +38,6 @@ import (
 	idb "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/db"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/errorutil"
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/racing"
-	"math"
-	"sort"
-	"sync"
-	"time"
 
 	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/log"
 )
@@ -462,8 +463,6 @@ func (p *Pool) Return(ctx context.Context, c idb.Connection) error {
 	}
 
 	if isAlive {
-		if c.
-
 		// Just put it back in the list of idle connections for this server
 		if !p.serversMut.TryLock(ctx) {
 			return racing.LockTimeoutError("could not acquire server lock when putting connection back to idle")
