@@ -811,6 +811,10 @@ func (b *bolt4) ForceReset(ctx context.Context) {
 	}
 	b.queue.appendReset(b.resetResponseHandler())
 	if b.queue.send(ctx); b.err != nil {
+		if b.err != nil {
+			panic("got err from send: " + b.err.Error())
+		}
+		b.state = bolt4_dead
 		return
 	}
 	for {
@@ -818,6 +822,13 @@ func (b *bolt4) ForceReset(ctx context.Context) {
 			return
 		}
 		if err := b.queue.receive(ctx); b.err != nil || err != nil {
+			if err != nil {
+				panic("got err from receive: " + err.Error())
+			}
+			if b.err != nil {
+				panic("got b.err from receive: " + b.err.Error())
+			}
+			b.state = bolt4_dead
 			return
 		}
 	}
