@@ -22,18 +22,18 @@ package pool
 import (
 	"context"
 	"errors"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	iauth "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/bolt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/config"
+	iauth "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/auth"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/bolt"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/errorutil"
 	"math/rand"
 	"sync"
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/testutil"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/log"
 )
 
 var logger = &log.Void{}

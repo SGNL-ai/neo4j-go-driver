@@ -26,19 +26,19 @@ import (
 	"container/list"
 	"context"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/bolt"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/racing"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/config"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/auth"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/bolt"
+	idb "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/errorutil"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/racing"
 	"math"
 	"sort"
 	"sync"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/log"
 )
 
 // DefaultLivenessCheckThreshold disables the liveness check of connections

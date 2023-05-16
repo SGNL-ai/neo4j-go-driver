@@ -21,8 +21,8 @@ package bolt
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/db"
+	idb "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
 )
 
 func noopOnNeo4jError(context.Context, idb.Connection, *db.Neo4jError) error {

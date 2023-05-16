@@ -22,8 +22,8 @@ package bolt
 import (
 	"context"
 	"encoding/binary"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
-	rio "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/racing"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/errorutil"
+	rio "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/racing"
 	"io"
 )
 

@@ -21,8 +21,8 @@ package testutil
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/log"
 	"time"
 )
 

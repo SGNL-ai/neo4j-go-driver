@@ -26,8 +26,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/test-integration/dbserver"
 )
 
 func TestTypes(outer *testing.T) {

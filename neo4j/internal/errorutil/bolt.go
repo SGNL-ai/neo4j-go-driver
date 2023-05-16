@@ -22,7 +22,7 @@ package errorutil
 import (
 	"context"
 	"fmt"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
+	idb "github.com/SGNL-ai/neo4j-go-driver/neo4j/db"
 	"strings"
 	"time"
 )

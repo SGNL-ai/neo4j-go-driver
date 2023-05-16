@@ -21,7 +21,7 @@ package errorutil
 
 import (
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/db"
 	"io"
 	"net"
 )

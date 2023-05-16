@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/dbtype"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/dbtype"
 )
 
 func assertKeys(t *testing.T, ekeys []any, keys []string) {

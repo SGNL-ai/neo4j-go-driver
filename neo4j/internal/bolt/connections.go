@@ -21,9 +21,9 @@ package bolt
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/db"
+	idb "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/errorutil"
 	"net"
 )
 

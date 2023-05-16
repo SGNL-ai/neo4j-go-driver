@@ -21,8 +21,8 @@ package neo4j
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/errorutil"
 )
 
 // ManagedTransaction represents a transaction managed by the driver and operated on by the user, via transaction functions

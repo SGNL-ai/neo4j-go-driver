@@ -23,12 +23,12 @@ package bolt
 import (
 	"context"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/racing"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/racing"
 	"net"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/log"
 )
 
 type protocolVersion struct {

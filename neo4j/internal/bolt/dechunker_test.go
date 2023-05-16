@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
+	. "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/testutil"
 )
 
 func TestDechunker(t *testing.T) {

@@ -24,15 +24,15 @@ import (
 	"context"
 	"crypto/tls"
 	"errors"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/config"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/errorutil"
 	"io"
 	"net"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/bolt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/bolt"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/log"
 )
 
 type Connector struct {

@@ -22,10 +22,10 @@ package bolt
 import (
 	"container/list"
 	"errors"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
+	idb "github.com/SGNL-ai/neo4j-go-driver/neo4j/internal/db"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
+	"github.com/SGNL-ai/neo4j-go-driver/neo4j/db"
 )
 
 type stream struct {
