@@ -27,8 +27,8 @@ import (
 	"strconv"
 	"time"
 
-	neo4j18 "github.com/neo4j/neo4j-go-driver/neo4j"
-	neo4j "github.com/neo4j/neo4j-go-driver/v5/neo4j"
+	neo4j18 "github.com/SGNL-ai/neo4j-go-driver/neo4j"
+	neo4j "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j"
 )
 
 func getSetup(driver neo4j.Driver) *neo4j.Node {

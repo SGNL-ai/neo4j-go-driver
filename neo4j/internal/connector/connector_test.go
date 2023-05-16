@@ -21,9 +21,9 @@ package connector_test
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/connector"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/config"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/connector"
+	. "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/testutil"
 	"io"
 	"net"
 	"testing"

@@ -21,9 +21,9 @@ package errorutil_test
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/db"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/testutil"
 	"testing"
 )
 

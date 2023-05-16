@@ -23,9 +23,9 @@ import (
 	"context"
 	"crypto/rand"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	iauth "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/db"
+	iauth "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/auth"
+	idb "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/db"
 	"math"
 	"math/big"
 	"net"
@@ -34,10 +34,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/bolt"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/bolt"
+	. "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/log"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
 )
 
 func noopOnNeo4jError(context.Context, idb.Connection, *db.Neo4jError) error {

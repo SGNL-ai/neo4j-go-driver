@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/dbtype"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/packstream"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/db"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/dbtype"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/packstream"
 )
 
 func TestDehydrateHydrate(ot *testing.T) {

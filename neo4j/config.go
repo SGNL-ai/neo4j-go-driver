@@ -20,8 +20,8 @@
 package neo4j
 
 import (
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/notifications"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/config"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/notifications"
 	"math"
 	"net/url"
 	"time"

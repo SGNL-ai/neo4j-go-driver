@@ -20,7 +20,7 @@
 package collections_test
 
 import (
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/collections"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/collections"
 	"math"
 	"math/rand"
 	"testing"

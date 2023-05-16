@@ -21,8 +21,8 @@ package neo4j_test
 
 import (
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j"
+	. "github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/testutil"
 	"testing"
 	"testing/quick"
 	"time"

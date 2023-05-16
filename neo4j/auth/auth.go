@@ -21,8 +21,8 @@ package auth
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/racing"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/auth"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/racing"
 	"reflect"
 	"time"
 )

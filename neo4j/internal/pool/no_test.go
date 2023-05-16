@@ -21,7 +21,7 @@ package pool
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/SGNL-ai/neo4j-go-driver/v5/neo4j/internal/db"
 	"testing"
 )
 
