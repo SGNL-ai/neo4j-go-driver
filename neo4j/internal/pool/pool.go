@@ -277,6 +277,7 @@ func (p *Pool) Borrow(ctx context.Context, getServerNames func(context.Context) 
 		}
 		if conn != nil {
 			p.queueMut.Unlock()
+			conn.Reset(ctx)
 			return conn, nil
 		}
 		// Add a waiting request to the queue and unlock the queue to let other threads that return
@@ -327,6 +328,7 @@ func (p *Pool) tryBorrow(ctx context.Context, serverName string, boltLogger log.
 			unlock.Do(p.serversMut.Unlock)
 			healthy, err := srv.healthCheck(ctx, connection, idlenessThreshold, auth, boltLogger)
 			if healthy {
+				connection.Reset(ctx)
 				return connection, nil
 			}
 			if err := p.unreg(context.Background(), serverName, connection, p.Now()); err != nil {
