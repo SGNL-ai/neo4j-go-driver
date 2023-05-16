@@ -807,12 +807,18 @@ func (b *bolt4) ForceReset(ctx context.Context) {
 	b.err = nil
 
 	if err := b.queue.receiveAll(ctx); b.err != nil || err != nil {
+		if err != nil {
+			panic("got err from receiveAll: " + err.Error())
+		}
+		if b.err != nil {
+			panic("got b.err from receiveAll: " + b.err.Error())
+		}
 		return
 	}
 	b.queue.appendReset(b.resetResponseHandler())
 	if b.queue.send(ctx); b.err != nil {
 		if b.err != nil {
-			panic("got err from send: " + b.err.Error())
+			panic("got b.err from send: " + b.err.Error())
 		}
 		b.state = bolt4_dead
 		return
