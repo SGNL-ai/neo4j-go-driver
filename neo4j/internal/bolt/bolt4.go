@@ -806,8 +806,6 @@ func (b *bolt4) ForceReset(ctx context.Context) {
 	// it should be recoverable.
 	b.err = nil
 
-	b.discardAllStreams(ctx)
-
 	if err := b.queue.receiveAll(ctx); b.err != nil || err != nil {
 		return
 	}
@@ -815,8 +813,13 @@ func (b *bolt4) ForceReset(ctx context.Context) {
 	if b.queue.send(ctx); b.err != nil {
 		return
 	}
-	if err := b.queue.receive(ctx); b.err != nil || err != nil {
-		return
+	for {
+		if b.state == bolt4_dead || b.state == bolt4_ready {
+			return
+		}
+		if err := b.queue.receive(ctx); b.err != nil || err != nil {
+			return
+		}
 	}
 }
 
